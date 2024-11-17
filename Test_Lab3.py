@@ -28,3 +28,15 @@ def test_bubble_sort_invalid():
     result = Lab3.bubble_sort(input_arr, 3)
 
     assert (result == [])
+
+def test_sort_ascending():
+    input_arr = [1, 2, 3, 81, 5]
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_ASCENDING)
+    test = [1, 2, 3, 5, 81]
+    assert (result == test)
+
+def test_sort_descending():
+    input_arr = [1, 2, 3, 81, 5]
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_DESCENDING)
+    test = [81, 5, 3, 2, 1]
+    assert (result == test)
