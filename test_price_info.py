@@ -1,6 +1,7 @@
 import price_info as info
 info.price_list = {"apple":1, "grape":3}
 info.quantity_list = {"apple":4, "grape":5}
+
 def test_total_cost_shopping():
     result = info.total_cost_shopping()
     test = 19
