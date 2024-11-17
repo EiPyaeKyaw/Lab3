@@ -33,15 +33,26 @@ def bubble_sort(arr, sorting_order):
                 else:
                     # Return an empty array
                     arr_result = []
+    elif(n>=10):
+        arr_result = 1
+    elif(n==0):
+        arr_result = 0
+    elif(type(n)==float):
+        arr_result = 2
     else:
         arr_result = -1
+    
 
     return arr_result
 
 def main():
     # Driver code to test above
-    arr = [64, 34, 25, 12, 22, 11, 90]
-
+    user_input = input("Enter Numbers : ")
+    string_list = user_input.split(",")
+    arr = []
+    for number_list in string_list:
+        arr.append(number_list)
+    
     # Sort in ascending order
     result = bubble_sort(arr, SORT_ASCENDING)
     print("\nSorted array in ascending order: ")
